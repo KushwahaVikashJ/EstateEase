@@ -1,5 +1,5 @@
 "use client";
-import GoogleAddressSearch from "@/app/_component/GoogleAddressSearch";
+import GoogleAddressSearch from "@/components/GoogleAddressSearch";
 import React from "react";
 
 function AddNewListing() {

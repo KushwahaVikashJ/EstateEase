@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./_component/Header";
+import Header from "@/components/Header";
 
 function Provider({ children }) {
   return (

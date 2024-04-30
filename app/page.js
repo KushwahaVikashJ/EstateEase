@@ -1,3 +1,9 @@
+import ListingMapView from "@/components/ListingMapView";
+
 export default function Home() {
-  return <div>Hello welcome to the new world.</div>;
+  return (
+    <div className="mt-28 p-10">
+      <ListingMapView type="Sell" />
+    </div>
+  );
 }

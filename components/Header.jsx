@@ -19,7 +19,7 @@ function Header() {
               pathname == "/" && "text-primary"
             }`}
           >
-            <Link href="/">For Sale</Link>
+            <Link href="/">For Sell</Link>
           </li>
           <li className="hover:text-primary font-medium text-sm cursor-pointer">
             For Rent

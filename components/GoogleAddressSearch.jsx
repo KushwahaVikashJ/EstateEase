@@ -9,7 +9,7 @@ import { MapPin } from "lucide-react";
 function GoogleAddressSearch({ selectedAddress, coordinates }) {
   return (
     <div className="flex items-center w-full">
-      <MapPin className="h-10 w-10 p-2 rounded-l-lg text-primary bg-purple-200" />
+      <MapPin className="h-10 w-10 p-2 rounded-l-lg text-primary bg-blue-200" />
       <GooglePlacesAutocomplete
         apiKey={process.env.NEXT_PUBLIC_GOOGLE_PACE_API_KEY}
         selectProps={{

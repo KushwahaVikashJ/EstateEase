@@ -5,25 +5,43 @@ import React from "react";
 import { Plus } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useUser, UserButton } from "@clerk/nextjs";
+import { SignOutButton, useUser } from "@clerk/nextjs";
+import Image from "next/image";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 function Header() {
   const pathname = usePathname();
-  const { isSignedIn } = useUser();
+  const { isSignedIn, user } = useUser();
   return (
     <div className="flex justify-between p-6 px-10 shadow-sm fixed z-10 bg-white w-full">
       <div className="flex items-center gap-10">
         <Icons.logo />
         <ul className="hidden md:flex gap-10">
-          <li
-            className={`hover:text-primary font-medium text-sm cursor-pointer ${
-              pathname == "/" && "text-primary"
-            }`}
-          >
-            <Link href="/">For Sell</Link>
-          </li>
-          <li className="hover:text-primary font-medium text-sm cursor-pointer">
-            For Rent
-          </li>
+          <Link href="/">
+            <li
+              className={`hover:text-primary font-medium text-sm cursor-pointer ${
+                pathname == "/" && "text-primary"
+              }`}
+            >
+              For Sell
+            </li>
+          </Link>
+          <Link href="/rent">
+            <li
+              className={`hover:text-primary font-medium text-sm cursor-pointer ${
+                pathname == "/rent" && "text-primary"
+              }`}
+            >
+              For Rent
+            </li>
+          </Link>
           <li className="hover:text-primary font-medium text-sm cursor-pointer">
             Agent Finder
           </li>
@@ -37,7 +55,29 @@ function Header() {
           </Button>
         </Link>
         {isSignedIn ? (
-          <UserButton />
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              {" "}
+              <Image
+                src={user?.imageUrl}
+                width={45}
+                height={45}
+                alt="user"
+                className="rounded-full"
+              />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>
+                <Link href="/user">Profile</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>My Listing</DropdownMenuItem>
+              <DropdownMenuItem>
+                <SignOutButton>Logout</SignOutButton>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         ) : (
           <Button variant="outline">
             <Link href="/sign-in">Login</Link>

@@ -12,6 +12,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import GoogleMapSection from "./GoogleMapSection";
 import AgentDetail from "./AgentDetail";
+import CopyToClipboardButton from "./CopyToClipboard";
 
 function Details({ listingDetails }) {
   return (
@@ -25,9 +26,7 @@ function Details({ listingDetails }) {
               {listingDetails?.address}
             </h2>
           </div>
-          <Button className="flex gap-2">
-            <Share /> Share
-          </Button>
+          <CopyToClipboardButton />
         </div>
         <hr></hr>
         <div className="mt-4 flex flex-col gap-3">

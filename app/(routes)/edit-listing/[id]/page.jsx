@@ -76,6 +76,10 @@ function EditListing({ params }) {
       setLoading(false);
       toast("Listing updated successfully");
     }
+    if (error) {
+      setLoading(false);
+      toast(`Server side error: `, error);
+    }
     for (const image of images) {
       setLoading(true);
       const file = image;
@@ -125,6 +129,7 @@ function EditListing({ params }) {
     if (data) {
       setLoading(false);
       toast("Listing published");
+      router.replace("/");
     }
   };
 
@@ -315,7 +320,7 @@ function EditListing({ params }) {
                       {loading ? (
                         <Loader className="animate-spin" />
                       ) : (
-                        "Save & Publish"
+                        "Publish"
                       )}
                     </Button>
                   </AlertDialogTrigger>

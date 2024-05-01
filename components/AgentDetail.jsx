@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 function AgentDetail({ listingDetails }) {
   return (
@@ -18,7 +19,12 @@ function AgentDetail({ listingDetails }) {
           <h2 className="text-gray-500">{listingDetails?.createdBy}</h2>
         </div>
       </div>
-      <Button>Send Message</Button>
+      <Link
+        className="cursor-pointer"
+        href={`mailto:${listingDetails?.createdBy}`}
+      >
+        <Button>Send Message</Button>
+      </Link>
     </div>
   );
 }

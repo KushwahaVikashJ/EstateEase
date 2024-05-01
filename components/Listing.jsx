@@ -37,11 +37,8 @@ function Listing({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {listing?.length > 0
           ? listing?.map((item, index) => (
-              <Link href={`/view-listing/${item?.id}`}>
-                <div
-                  key={index}
-                  className="p-3 hover:border hover:border-primary cursor-pointer rounded-lg"
-                >
+              <Link href={`/view-listing/${item?.id}`} key={index}>
+                <div className="p-3 hover:border hover:border-primary cursor-pointer rounded-lg">
                   <Image
                     src={
                       item?.listingImages?.[0]

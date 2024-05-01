@@ -48,12 +48,14 @@ function Header() {
         </ul>
       </div>
       <div className="flex gap-2">
-        <Link href="add-new-listing">
-          <Button className="flex gap-2">
-            <Plus className="h-5 w-5" />
-            Post Your Ad
-          </Button>
-        </Link>
+        {user && (
+          <Link href="add-new-listing">
+            <Button className="flex gap-2">
+              <Plus className="h-5 w-5" />
+              Post Your Ad
+            </Button>
+          </Link>
+        )}
         {isSignedIn ? (
           <DropdownMenu>
             <DropdownMenuTrigger>
@@ -72,7 +74,9 @@ function Header() {
               <DropdownMenuItem>
                 <Link href="/user">Profile</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>My Listing</DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href="/user/my-listing">My Listing</Link>
+              </DropdownMenuItem>
               <DropdownMenuItem>
                 <SignOutButton>Logout</SignOutButton>
               </DropdownMenuItem>

@@ -12,7 +12,7 @@ Features:
 
 - Create property to showcase for sell or rent
 - List down property using google-places-autocomplete
-- Add more information about property
+- Add more information about property with multiple image upload
 - Listing of property for sell/rent
 - Detail page for property
 - Track property over google-maps

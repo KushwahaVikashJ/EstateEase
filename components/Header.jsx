@@ -26,7 +26,7 @@ function Header() {
         <ul className="hidden md:flex gap-10">
           <Link href="/">
             <li
-              className={`hover:text-primary font-medium text-sm cursor-pointer ${
+              className={`hover:text-primary font-medium text-base cursor-pointer ${
                 pathname == "/" && "text-primary"
               }`}
             >
@@ -35,14 +35,14 @@ function Header() {
           </Link>
           <Link href="/rent">
             <li
-              className={`hover:text-primary font-medium text-sm cursor-pointer ${
+              className={`hover:text-primary font-medium text-base cursor-pointer ${
                 pathname == "/rent" && "text-primary"
               }`}
             >
               For Rent
             </li>
           </Link>
-          <li className="hover:text-primary font-medium text-sm cursor-pointer">
+          <li className="hover:text-primary font-medium text-base cursor-pointer">
             Agent Finder
           </li>
         </ul>

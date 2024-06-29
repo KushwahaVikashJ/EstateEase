@@ -22,7 +22,12 @@ function Header() {
   return (
     <div className="flex justify-between p-6 px-10 shadow-sm fixed z-10 bg-white w-full">
       <div className="flex items-center gap-10">
-        <Icons.logo />
+        <Link
+          href="/"
+          className="text-3xl font-bold tracking-tight text-[#4845d2] "
+        >
+          EstateEase
+        </Link>
         <ul className="hidden md:flex gap-10">
           <Link href="/">
             <li

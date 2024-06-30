@@ -6,8 +6,8 @@ import { Toaster } from "@/components/ui/sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Rent Real Estate",
-  description: "Add and Showcase Real-Estate(rent, sell) property",
+  title: "EstateEase",
+  description: "Listing properties for sale or rent",
 };
 
 export default function RootLayout({ children }) {

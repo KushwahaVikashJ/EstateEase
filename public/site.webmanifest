@@ -1,7 +1,7 @@
 {
   "name": "EstateEase",
   "short_name": "EstateEase",
-  "description": "Real estate platform",
+  "description": "Listing properties for sale or rent",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

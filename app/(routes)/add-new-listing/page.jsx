@@ -39,9 +39,9 @@ function AddNewListing() {
 
   return (
     <div className="mt-28 md:mx-56 lg:mx-80">
-      <div className="p-10 flex flex-col gap-5 justify-center items-center">
+      <div className="p-2 md:p-10 flex flex-col gap-5 justify-center items-center">
         <h2 className="font-bold text-2xl">Add New Listing</h2>
-        <div className="p-10 rounded-lg border shadow-md flex flex-col gap-2 w-full">
+        <div className="p-2 md:p-10 rounded-lg border shadow-md flex flex-col gap-2 w-full">
           <h2 className="text-gray-500">
             Enter address which you want to list
           </h2>

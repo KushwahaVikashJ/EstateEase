@@ -24,7 +24,7 @@ function Header() {
       <div className="flex items-center gap-10">
         <Link
           href="/"
-          className="text-xl md:text-3xl font-bold tracking-tight text-[#4845d2] "
+          className="text-2xl md:text-3xl font-bold tracking-tight text-[#4845d2] "
         >
           EstateEase
         </Link>

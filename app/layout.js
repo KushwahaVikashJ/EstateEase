@@ -8,19 +8,23 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "EstateEase",
   description: "Listing properties for sale or rent",
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={inter.className}>
+    <html lang="en">
+      <body className={inter.className}>
+        <ClerkProvider>
           <Provider>
             <Toaster />
             {children}
           </Provider>
-        </body>
-      </html>
-    </ClerkProvider>
+        </ClerkProvider>
+      </body>
+    </html>
   );
 }

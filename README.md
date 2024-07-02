@@ -1,6 +1,6 @@
 # EstateEase
 
-![EstateEase Landing Page](public/rental_6.png)
+![EstateEase Landing Page](public/cover.png)
 
 ## About the Project
 

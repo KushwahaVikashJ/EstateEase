@@ -18,7 +18,7 @@ function Listing({
 }) {
   return (
     <div>
-      <div className="flex gap-6 p-3">
+      <div className="flex flex-col md:flex-row gap-3 p-3">
         <GoogleAddressSearch
           selectedAddress={(v) => searchedAddress(v)}
           coordinates={setCoordinates}

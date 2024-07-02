@@ -24,7 +24,7 @@ function Header() {
       <div className="flex items-center gap-10">
         <Link
           href="/"
-          className="text-3xl font-bold tracking-tight text-[#4845d2] "
+          className="text-xl md:text-3xl font-bold tracking-tight text-[#4845d2] "
         >
           EstateEase
         </Link>
@@ -57,7 +57,7 @@ function Header() {
           <Link href="add-new-listing">
             <Button className="flex gap-2">
               <Plus className="h-5 w-5" />
-              Post Your Ad
+              Post
             </Button>
           </Link>
         )}

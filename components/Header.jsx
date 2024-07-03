@@ -47,9 +47,6 @@ function Header() {
               For Rent
             </li>
           </Link>
-          <li className="hover:text-primary font-medium text-base cursor-pointer">
-            Agent Finder
-          </li>
         </ul>
       </div>
       <div className="flex gap-2">
